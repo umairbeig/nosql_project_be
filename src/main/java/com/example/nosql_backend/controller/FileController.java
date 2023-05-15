@@ -27,7 +27,7 @@ public class FileController {
     @GetMapping("/open/{filePath}")
     public ResponseEntity<Resource> displayTextFile(@PathVariable String filePath) throws IOException {
         FileSystem fileSystem = FileSystem.get(hadoopConfiguration);
-        Path path = new Path("/input/"+filePath+".txt");
+        Path path = new Path("/input/"+filePath);
         System.out.println(path);
 
         if (fileSystem.exists(path)) {

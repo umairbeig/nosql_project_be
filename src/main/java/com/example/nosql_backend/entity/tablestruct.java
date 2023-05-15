@@ -2,15 +2,14 @@ package com.example.nosql_backend.entity;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "indextable")
-public class invertedindex  {
-    @Id
+
+public class tablestruct {
     private String id;
 
     private String word;
     private Doc[] docs;
 
-    public invertedindex(String id, String word, Doc[] docs) {
+    public tablestruct(String id, String word, Doc[] docs) {
         this.id = id;
         this.word = word;
         this.docs = docs;
